@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Pagination | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Pagination</h1>
+    <p>Two things can get paginated: a section and a taxonomy term.</p>
+<p>Both kinds get a <code>paginator</code> variable of the <code>Pager</code> type, on top of the common variables mentioned in the
+<a href="https://www.getzola.org/documentation/templates/overview/">overview page</a>:</p>
+<pre style="background-color:#383838;">
+<span style="color:#95815e;">// How many items per pager
+</span><span style="color:#d0d0ff;">paginate_by</span><span style="color:#e6e1dc;">: </span><span style="font-style:italic;color:#6e9cbe;">Number</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// The base URL for the pagination: section permalink + pagination path
+// You can concatenate an integer with that to get a link to a given pagination pager.
+</span><span style="color:#d0d0ff;">base_url</span><span style="color:#e6e1dc;">: </span><span style="font-style:italic;color:#6e9cbe;">String</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// How many pagers in total
+</span><span style="color:#d0d0ff;">number_pagers</span><span style="color:#e6e1dc;">: </span><span style="font-style:italic;color:#6e9cbe;">Number</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// Permalink to the first pager
+</span><span style="color:#d0d0ff;">first</span><span style="color:#e6e1dc;">: </span><span style="font-style:italic;color:#6e9cbe;">String</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// Permalink to the last pager
+</span><span style="color:#d0d0ff;">last</span><span style="color:#e6e1dc;">: </span><span style="font-style:italic;color:#6e9cbe;">String</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// Permalink to the previous pager, if there is one
+</span><span style="color:#d0d0ff;">previous</span><span style="color:#e6e1dc;">: </span><span style="font-style:italic;color:#6e9cbe;">String</span><span style="color:#cc7833;">?</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// Permalink to the next pager, if there is one
+</span><span style="color:#d0d0ff;">next</span><span style="color:#cc7833;">: </span><span style="font-style:italic;color:#6e9cbe;">String</span><span style="color:#cc7833;">?</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// All pages for the current pager
+</span><span style="color:#d0d0ff;">pages</span><span style="color:#cc7833;">: </span><span style="font-style:italic;color:#6e9cbe;">Array</span><span style="color:#cc7833;">&lt;</span><span style="color:#d0d0ff;">Page</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;">;
+</span><span style="color:#95815e;">// Which pager are we on
+</span><span style="color:#d0d0ff;">current_index</span><span style="color:#e6e1dc;">: </span><span style="font-style:italic;color:#6e9cbe;">Number</span><span style="color:#e6e1dc;">;
+</span></pre>
+<p>A pager is a page of the pagination: if you have 100 pages and are paginating 10 by 10, you will have 10 pagers containing
+each 10 pages.</p>
+<h2 id="section"><a class="zola-anchor" href="#section" aria-label="Anchor link for: section">🔗</a>Section</h2>
+<p>A paginated section gets the same <code>section</code> variable as a normal
+<a href="https://www.getzola.org/documentation/templates/pages-sections/#section-variables">section page</a>
+minus its pages. The pages are instead in <code>paginator.pages</code>.</p>
+<h2 id="taxonomy-term"><a class="zola-anchor" href="#taxonomy-term" aria-label="Anchor link for: taxonomy-term">🔗</a>Taxonomy term</h2>
+<p>A paginated taxonomy gets two variables aside from the <code>paginator</code> variable:</p>
+<ul>
+<li>a <code>taxonomy</code> variable of type <code>TaxonomyConfig</code></li>
+<li>a <code>term</code> variable of type <code>TaxonomyTerm</code>.</li>
+</ul>
+<p>See the <a href="https://www.getzola.org/documentation/templates/taxonomies/">taxonomies page</a> for a detailed version of the types.</p>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

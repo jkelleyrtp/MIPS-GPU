@@ -1,0 +1,12 @@
+base_url = "https://www.getzola.org/"
+title = "MIPS GPU"
+description = "A simple MIPS general purpose parallel processing unit designed in Verilog"
+
+compile_sass = true
+highlight_code = true
+insert_anchor_links = true
+highlight_theme = "kronuz"
+build_search_index = true
+
+[extra]
+author = "Vincent Prouillet"

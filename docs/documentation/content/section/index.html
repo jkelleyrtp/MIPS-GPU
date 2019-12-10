@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Section | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Section</h1>
+    <p>A section is created whenever a folder (or subfolder) in the <code>content</code> section contains an
+<code>_index.md</code> file.  If a folder does not contain an <code>_index.md</code> file, no section will be
+created, but markdown files within that folder will still create pages (known as orphan pages).</p>
+<p>The index page (i.e., the page displayed when a user browses to your <code>base_url</code>) is a section,
+which is created whether or not you add an <code>_index.md</code> file at the root of your <code>content</code> folder.
+If you do not create an <code>_index.md</code> file in your content directory, this main content section will
+not have any content or metadata.  If you would like to add content or metadata, you can add an
+<code>_index.md</code> file at the root of the <code>content</code> folder and edit it just as you would edit any other
+<code>_index.md</code> file; your <code>index.html</code> template will then have access to that content and metadata.</p>
+<p>Any non-Markdown file in the section folder is added to the <code>assets</code> collection of the section, as explained in the <a href="https://www.getzola.org/documentation/content/overview/#assets-colocation">Content Overview</a>. These files are then available from the Markdown using relative links.</p>
+<h2 id="front-matter"><a class="zola-anchor" href="#front-matter" aria-label="Anchor link for: front-matter">🔗</a>Front-matter</h2>
+<p>The <code>_index.md</code> file within a folder defines the content and metadata for that section.  To set
+the metadata, add front matter to the file.</p>
+<p>The front-matter is a set of metadata embedded in a file. In Zola,
+it is at the beginning of the file, surrounded by <code>+++</code> and uses TOML.</p>
+<p>After the closing <code>+++</code>, you can add content that will be parsed as markdown and will be available
+to your templates through the <code>section.content</code> variable.</p>
+<p>While none of the front-matter variables are mandatory, the opening and closing <code>+++</code> are required.</p>
+<p>Here is an example <code>_index.md</code> with all the variables available.  The values provided below are the
+default values.</p>
+<pre style="background-color:#383838;">
+<span style="color:#e8bf6a;">title </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+
+</span><span style="color:#e8bf6a;">description </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+
+</span><span style="color:#95815e;"># Whether to sort pages by &quot;date&quot;, &quot;weight&quot;, or &quot;none&quot;. More on that below
+</span><span style="color:#e8bf6a;">sort_by </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;none&quot;
+
+</span><span style="color:#95815e;"># Used by the parent section to order its subsections.
+# Lower values have priority.
+</span><span style="color:#e8bf6a;">weight </span><span style="color:#e6e1dc;">= </span><span style="color:#a5c261;">0
+
+</span><span style="color:#95815e;"># Template to use to render this section page
+</span><span style="color:#e8bf6a;">template </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;section.html&quot;
+
+</span><span style="color:#95815e;"># Apply the given template to ALL pages below the section, recursively.
+# If you have several nested sections each with a page_template set, the page
+# will always use the closest to itself.
+# However, a page own `template` variable will always have priority.
+# Not set by default
+</span><span style="color:#e8bf6a;">page_template </span><span style="color:#e6e1dc;">=
+
+</span><span style="color:#95815e;"># How many pages to be displayed per paginated page.
+# No pagination will happen if this isn&#39;t set or if the value is 0
+</span><span style="color:#e8bf6a;">paginate_by </span><span style="color:#e6e1dc;">= </span><span style="color:#a5c261;">0
+
+</span><span style="color:#95815e;"># If set, will be the path used by paginated page and the page number will be appended after it.
+# For example the default would be page/1
+</span><span style="color:#e8bf6a;">paginate_path </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;page&quot;
+
+</span><span style="color:#95815e;"># Whether to insert a link for each header like the ones you can see in this site if you hover one
+# The default template can be overridden by creating a `anchor-link.html` in the `templates` directory
+# Options are &quot;left&quot;, &quot;right&quot; and &quot;none&quot;
+</span><span style="color:#e8bf6a;">insert_anchor_links </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;none&quot;
+
+</span><span style="color:#95815e;"># Whether the section pages should be in the search index. This is only used if
+# `build_search_index` is set to true in the config
+</span><span style="color:#e8bf6a;">in_search_index </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">true
+
+</span><span style="color:#95815e;"># Whether to render that section homepage or not.
+# Useful when the section is only there to organize things but is not meant
+# to be used directly
+</span><span style="color:#e8bf6a;">render </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">true
+
+</span><span style="color:#95815e;"># Whether to redirect when landing on that section. Defaults to not being set.
+# Useful for the same reason as `render` but when you don&#39;t want a 404 when
+# landing on the root section page.
+# Example: redirect_to = &quot;documentation/content/overview&quot;
+</span><span style="color:#e8bf6a;">redirect_to </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+
+</span><span style="color:#95815e;"># Whether the section should pass its pages on to the parent section. Defaults to `false`.
+# Useful when the section shouldn&#39;t split up the parent section, like
+# sections for each year under a posts section.
+</span><span style="color:#e8bf6a;">transparent </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">false
+
+</span><span style="color:#95815e;"># Use aliases if you are moving content but want to redirect previous URLs to the
+# current one. This takes an array of path, not URLs.
+</span><span style="color:#e8bf6a;">aliases </span><span style="color:#e6e1dc;">= []
+
+</span><span style="color:#95815e;"># Your own data
+</span><span style="color:#e6e1dc;">[</span><span style="color:#e8bf6a;">extra</span><span style="color:#e6e1dc;">]
+</span></pre>
+<p>Keep in mind that any configuration apply only to the direct pages, not to the subsections' pages.</p>
+<h2 id="pagination"><a class="zola-anchor" href="#pagination" aria-label="Anchor link for: pagination">🔗</a>Pagination</h2>
+<p>To enable pagination for a section's pages, simply set <code>paginate_by</code> to a positive number and it will automatically
+paginate by this much. See <a href="https://www.getzola.org/documentation/templates/pagination/">pagination template documentation</a> for more information
+on what will be available in the template.</p>
+<p>You can also change the pagination path (the word displayed while paginated in the URL, like <code>page/1</code>)
+by setting the <code>paginate_path</code> variable, which defaults to <code>page</code>.</p>
+<h2 id="sorting"><a class="zola-anchor" href="#sorting" aria-label="Anchor link for: sorting">🔗</a>Sorting</h2>
+<p>It is very common for Zola templates to iterate over pages or sections
+to display all pages/sections a given directory.  Consider a very simple
+example: a <code>blog</code> directory with three files: <code>blog/Post_1.md</code>,
+<code>blog/Post_2.md</code>, and <code>blog/Post_3.md</code>.  To iterate over these posts and
+create a list of links to the posts, a simple template might look like this:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">{% </span><span style="color:#cc7833;">for </span><span style="color:#d0d0ff;">post </span><span style="color:#cc7833;">in </span><span style="color:#d0d0ff;">section</span><span style="color:#e6e1dc;">.</span><span style="color:#d0d0ff;">pages </span><span style="color:#e6e1dc;">%}
+  &lt;</span><span style="color:#e8bf6a;">h1</span><span style="color:#e6e1dc;">&gt;&lt;</span><span style="color:#e8bf6a;">a href</span><span style="color:#86c20e;">=</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#c1be91;">{{ post.permalink }}</span><span style="color:#e6e1dc;">&quot;&gt;{{ </span><span style="color:#d0d0ff;">post</span><span style="color:#e6e1dc;">.</span><span style="color:#d0d0ff;">title </span><span style="color:#e6e1dc;">}}&lt;/</span><span style="color:#e8bf6a;">a</span><span style="color:#e6e1dc;">&gt;&lt;/</span><span style="color:#e8bf6a;">h1</span><span style="color:#e6e1dc;">&gt;
+{% </span><span style="color:#cc7833;">endfor </span><span style="color:#e6e1dc;">%}
+</span></pre>
+<p>This would iterate over the posts, and would do so in a specific order
+based on the <code>sort_by</code> variable set in the <code>_index.md</code> page for the
+containing section.  The <code>sort_by</code> variable can be given three values: <code>date</code>,
+<code>weight</code>, and <code>none</code>.  If no <code>sort_by</code> method is set, the pages will be
+sorted in the <code>none</code> order, which is not intended to be used for sorted content.</p>
+<p>Any page that is missing the data it needs to be sorted will be ignored and
+won't be rendered. For example, if a page is missing the date variable the
+containing section sets <code>sort_by = &quot;date&quot;</code>, then that page will be ignored.
+The terminal will warn you if this is happening.</p>
+<p>If several pages have the same date/weight/order, their permalink will be used
+to break the tie following an alphabetical order.</p>
+<h2 id="sorting-pages"><a class="zola-anchor" href="#sorting-pages" aria-label="Anchor link for: sorting-pages">🔗</a>Sorting Pages</h2>
+<p>The <code>sort_by</code> front-matter variable can have the following values:</p>
+<h3 id="date"><a class="zola-anchor" href="#date" aria-label="Anchor link for: date">🔗</a><code>date</code></h3>
+<p>This will sort all pages by their <code>date</code> field, from the most recent (at the
+top of the list) to the oldest (at the bottom of the list).  Each page will
+get <code>page.earlier</code> and <code>page.later</code> variables that contain the pages with
+earlier and later dates, respectively.</p>
+<h3 id="weight"><a class="zola-anchor" href="#weight" aria-label="Anchor link for: weight">🔗</a><code>weight</code></h3>
+<p>This will be sort all pages by their <code>weight</code> field, from lightest weight
+(at the top of the list) to heaviest (at the bottom of the list).  Each
+page gets <code>page.lighter</code> and <code>page.heavier</code> variables that contain the
+pages with lighter and heavier weights, respectively.</p>
+<p>When iterating through pages, you may wish to use the Tera <code>reverse</code> filter,
+which reverses the order of the pages.  Thus, after using the <code>reverse</code> filter,
+pages sorted by weight will be sorted from lightest (at the top) to heaviest
+(at the bottom); pages sorted by date will be sorted from oldest (at the top)
+to newest (at the bottom).</p>
+<p><code>reverse</code> has no effect on <code>page.later</code>/<code>page.earlier</code>/<code>page.heavier</code>/<code>page.lighter</code>.</p>
+<h2 id="sorting-subsections"><a class="zola-anchor" href="#sorting-subsections" aria-label="Anchor link for: sorting-subsections">🔗</a>Sorting Subsections</h2>
+<p>Sorting sections is a bit less flexible: sections are always sorted by <code>weight</code>,
+and do not have any variables that point to the next heavier/lighter sections.</p>
+<p>Based on this, by default the lightest (lowest <code>weight</code>) subsections will be at
+the top of the list and the heaviest (highest <code>weight</code>) will be at the bottom;
+the <code>reverse</code> filter reverses this order.</p>
+<p><strong>Note</strong>: Unlike pages, permalinks will <strong>not</strong> be used to break ties between
+equally weighted sections.  Thus, if the <code>weight</code> variable for your section is not set (or if it
+is set in a way that produces ties), then your sections will be sorted in
+<strong>random</strong> order. Moreover, that order is determined at build time and will
+change with each site rebuild.  Thus, if there is any chance that you will
+iterate over your sections, you should always assign them weight.</p>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

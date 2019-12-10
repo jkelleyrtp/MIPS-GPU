@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Page | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Page</h1>
+    <p>A page is any file ending with <code>.md</code> in the <code>content</code> directory, except files
+named <code>_index.md</code>.</p>
+<p>If a file ending with <code>.md</code> is named <code>index.md</code>, then it will generate a page
+with the name of the containing folder (for example, <code>/content/about/index.md</code> would
+create a page at <code>[base_url]/about</code>).  (Note the lack of an underscore; if the file
+were named <code>_index.md</code>, then it would create a <strong>section</strong> at <code>[base_url]/about</code>, as
+discussed in the prior part of this documentation.  But naming the file <code>index.md</code> will
+create a <strong>page</strong> at <code>[base_url]/about</code>).</p>
+<p>If the file is given any name <em>other</em> than <code>index.md</code> or <code>_index.md</code>, then it will
+create a page with that name (without the <code>.md</code>). So naming a file in the root of your
+content directory <code>about.md</code> would also create a page at <code>[base_url]/about</code>.
+Another exception to that rule is that a filename starting with a datetime (YYYY-mm-dd or <a href="https://www.ietf.org/rfc/rfc3339.txt">a RFC3339 datetime</a>) followed by
+an underscore (<code>_</code>) or a dash (<code>-</code>) will use that date as the page date, unless already set
+in the front-matter. The page name will be anything after <code>_</code>/<code>-</code> so a filename like <code>2018-10-10-hello-world.md</code> will
+be available at <code>[base_url]/hello-world</code>. Note that the full RFC3339 datetime contains colons, which is not a valid
+character in a filename on Windows.</p>
+<p>As you can see, creating an <code>about.md</code> file is exactly equivalent to creating an
+<code>about/index.md</code> file.  The only difference between the two methods is that creating
+the <code>about</code> folder allows you to use asset colocation, as discussed in the
+<a href="https://www.getzola.org/documentation/content/overview/#assets-colocation">Overview</a> section of this documentation.</p>
+<h2 id="front-matter"><a class="zola-anchor" href="#front-matter" aria-label="Anchor link for: front-matter">🔗</a>Front-matter</h2>
+<p>The front-matter is a set of metadata embedded in a file. In Zola,
+it is at the beginning of the file, surrounded by <code>+++</code> and uses TOML.</p>
+<p>While none of the front-matter variables are mandatory, the opening and closing <code>+++</code> are required.</p>
+<p>Here is an example page with all the variables available.  The values provided below are the default
+values.</p>
+<pre style="background-color:#383838;">
+<span style="color:#e8bf6a;">title </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+</span><span style="color:#e8bf6a;">description </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+
+</span><span style="color:#95815e;"># The date of the post.
+# 2 formats are allowed: YYYY-MM-DD (2012-10-02) and RFC3339 (2002-10-02T15:00:00Z)
+# Do not wrap dates in quotes, the line below only indicates that there is no default date.
+# If the section variable `sort_by` is set to `date`, then any page that lacks a `date`
+# will not be rendered.
+# Setting this overrides a date set in the filename.
+</span><span style="color:#e8bf6a;">date </span><span style="color:#e6e1dc;">=
+
+</span><span style="color:#95815e;"># The weight as defined in the Section page
+# If the section variable `sort_by` is set to `weight`, then any page that lacks a `weight`
+# will not be rendered.
+</span><span style="color:#e8bf6a;">weight </span><span style="color:#e6e1dc;">= </span><span style="color:#a5c261;">0
+
+</span><span style="color:#95815e;"># A draft page is only loaded if the `--drafts` flag is passed to `zola build`, `zola serve` or `zola check`
+</span><span style="color:#e8bf6a;">draft </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">false
+
+</span><span style="color:#95815e;"># If filled, it will use that slug instead of the filename to make up the URL
+# It will still use the section path though
+</span><span style="color:#e8bf6a;">slug </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+
+</span><span style="color:#95815e;"># The path the content will appear at
+# If set, it cannot be an empty string and will override both `slug` and the filename.
+# The sections&#39; path won&#39;t be used.
+# It should not start with a `/` and the slash will be removed if it does
+</span><span style="color:#e8bf6a;">path </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+
+</span><span style="color:#95815e;"># Use aliases if you are moving content but want to redirect previous URLs to the
+# current one. This takes an array of path, not URLs.
+</span><span style="color:#e8bf6a;">aliases </span><span style="color:#e6e1dc;">= []
+
+</span><span style="color:#95815e;"># Whether the page should be in the search index. This is only used if
+# `build_search_index` is set to true in the config and the parent section
+# hasn&#39;t set `in_search_index` to false in its front-matter
+</span><span style="color:#e8bf6a;">in_search_index </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">true
+
+</span><span style="color:#95815e;"># Template to use to render this page
+</span><span style="color:#e8bf6a;">template </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;page.html&quot;
+
+</span><span style="color:#95815e;"># The taxonomies for that page. The keys need to be the same as the taxonomies
+# name configured in `config.toml` and the values an array of String like
+# tags = [&quot;rust&quot;, &quot;web&quot;]
+</span><span style="color:#e6e1dc;">[</span><span style="color:#e8bf6a;">taxonomies</span><span style="color:#e6e1dc;">]
+
+</span><span style="color:#95815e;"># Your own data
+</span><span style="color:#e6e1dc;">[</span><span style="color:#e8bf6a;">extra</span><span style="color:#e6e1dc;">]
+</span></pre><h2 id="summary"><a class="zola-anchor" href="#summary" aria-label="Anchor link for: summary">🔗</a>Summary</h2>
+<p>You can ask Zola to create a summary if you only want to show the first
+paragraph of each page in a list for example.</p>
+<p>To do so, add <code>&lt;!-- more --&gt;</code> in your content at the point
+where you want the summary to end and the content up to that point will be also
+available separately in the
+<a href="https://www.getzola.org/documentation/templates/pages-sections/#page-variables">template</a>.</p>
+<p>An anchor link to this position named <code>continue-reading</code> is created, wrapped in a paragraph
+with a <code>zola-continue-reading</code> id, so you can link directly to it if needed for example:
+<code>&lt;a href=&quot;{{ page.permalink }}#continue-reading&quot;&gt;Continue Reading&lt;/a&gt;</code></p>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

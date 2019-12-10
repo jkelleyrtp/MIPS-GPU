@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Sass | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Sass</h1>
+    <p>Sass is a popular CSS extension language that approaches some of the harder
+parts of maintaining large sets of CSS rules. If you're curious about what Sass
+is and why it might be useful for styling your static site, the following links
+may be of interest:</p>
+<ul>
+<li>The <a href="http://sass-lang.com/">official Sass website</a></li>
+<li><a href="https://alistapart.com/article/why-sass">Why Sass?</a>, by Dan Cederholm</li>
+</ul>
+<h2 id="using-sass-in-zola"><a class="zola-anchor" href="#using-sass-in-zola" aria-label="Anchor link for: using-sass-in-zola">🔗</a>Using Sass in Zola</h2>
+<p>Zola processes any files with the <code>sass</code> or <code>scss</code> extensions in the <code>sass</code>
+folder, and places the processed output into a <code>css</code> file with the same folder
+structure and base name into the <code>public</code> folder:</p>
+<pre style="background-color:#383838;">
+<span style="color:#da4939;">.
+</span><span style="color:#e6e1dc;">└── sass
+    ├── style.scss // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> ./public/style.css
+    ├── indented_style.sass // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> ./public/indented_style.css
+    ├── _include.scss </span><span style="font-style:italic;color:#7c7865;"># This file won&#39;t get put into the `public` folder, but other files can @import it.
+</span><span style="color:#e6e1dc;">    ├── assets
+    │   ├── fancy.scss // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> ./public/assets/fancy.css
+    │   ├── same_name.scss // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> ./public/assets/same_name.css
+    │   ├── same_name.sass </span><span style="font-style:italic;color:#7c7865;"># CONFLICT! This has the same base name as the file above, so Zola will return an error.
+</span><span style="color:#e6e1dc;">    │   └── _common_mixins.scss </span><span style="font-style:italic;color:#7c7865;"># This file won&#39;t get put into the `public` folder, but other files can @import it.
+</span><span style="color:#e6e1dc;">    └── secret-side-project
+        └── style.scss // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> ./public/secret-side-project/fancy.css
+</span></pre>
+<p>Files with a leading underscore in the name are not placed into the <code>public</code>
+folder, but can still be used as <code>@import</code> dependencies. For more information, see the &quot;Partials&quot; section of
+<a href="https://sass-lang.com/guide#partials">Sass Basics</a>.</p>
+<p>Files with the <code>scss</code> extension use <a href="http://sass-lang.com/documentation/#Formatting">&quot;Sassy CSS&quot; syntax</a>,
+while files with the <code>sass</code> extension use the <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">&quot;indented&quot; syntax</a>.
+Zola will return an error if a <code>scss</code> and <code>sass</code> file exist with the same
+base name in the same folder to avoid confusion -- see the example above.</p>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

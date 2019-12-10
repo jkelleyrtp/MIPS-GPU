@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Configuration | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Configuration</h1>
+    <p>The default configuration will be enough to get Zola running locally but not more than that.
+It follows the philosophy of only paying for what you need: almost everything is turned off by default.</p>
+<p>To change the config, edit the <code>config.toml</code> file.
+If you are not familiar with TOML, have a look at <a href="https://github.com/toml-lang/toml">the TOML Spec</a>
+to learn about it.</p>
+<p>Only one variable - <code>base_url</code> - is mandatory, everything else is optional. You can find all variables
+used by Zola config as well as their default values below:</p>
+<pre style="background-color:#383838;">
+<span style="color:#95815e;"># Base URL of the site, the only required config argument
+</span><span style="color:#e8bf6a;">base_url </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;mywebsite.com&quot;
+
+</span><span style="color:#95815e;"># Used in RSS by default
+</span><span style="color:#e8bf6a;">title </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+</span><span style="color:#e8bf6a;">description </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+</span><span style="color:#95815e;"># The default language, used in RSS
+</span><span style="color:#e8bf6a;">default_language </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;en&quot;
+
+</span><span style="color:#95815e;"># Theme name to use
+</span><span style="color:#e8bf6a;">theme </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;&quot;
+
+</span><span style="color:#95815e;"># Highlight all code blocks found
+</span><span style="color:#e8bf6a;">highlight_code </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">false
+
+</span><span style="color:#95815e;"># Which theme to use for the code highlighting.
+# See below for list of accepted values
+</span><span style="color:#e8bf6a;">highlight_theme </span><span style="color:#e6e1dc;">= </span><span style="color:#c1be91;">&quot;base16-ocean-dark&quot;
+
+</span><span style="color:#95815e;"># Whether to generate a RSS feed automatically
+</span><span style="color:#e8bf6a;">generate_rss </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">false
+
+</span><span style="color:#95815e;"># The number of articles to include in the RSS feed. Will include all items if
+# not set (the default).
+# rss_limit = 20
+
+# Whether to copy or hardlink files in static/ directory. Useful for sites
+# whose static files are large. Note that for this to work, both static/ and
+# output directory need to be on the same filesystem. Also, theme&#39;s static/
+# files are always copies, regardles of this setting. False by default.
+# hard_link_static = false
+
+# The taxonomies to be rendered for that site and their configuration
+# Example:
+#     taxonomies = [
+#       {name = &quot;tags&quot;, rss = true}, # each tag will have its own RSS feed
+#       {name = &quot;tags&quot;, lang = &quot;fr&quot;}, # you can have taxonomies with the same name in multiple languages
+#       {name = &quot;categories&quot;, paginate_by = 5},  # 5 items per page for a term
+#       {name = &quot;authors&quot;}, # Basic definition: no RSS or pagination
+#     ]
+#
+</span><span style="color:#e8bf6a;">taxonomies </span><span style="color:#e6e1dc;">= []
+
+</span><span style="color:#95815e;"># The additional languages for that site
+# Example:
+#     languages = [
+#       {code = &quot;fr&quot;, rss = true}, # there will be a RSS feed for French content
+#       {code = &quot;fr&quot;, search = true}, # there will be a Search Index for French content
+#       {code = &quot;it&quot;}, # there won&#39;t be a RSS feed for Italian content
+#     ]
+#
+</span><span style="color:#e8bf6a;">languages </span><span style="color:#e6e1dc;">= []
+
+</span><span style="color:#95815e;"># Whether to compile the Sass files found in the `sass` directory
+</span><span style="color:#e8bf6a;">compile_sass </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">false
+
+</span><span style="color:#95815e;"># Whether to build a search index out of the pages and section
+# content for the `default_language`
+</span><span style="color:#e8bf6a;">build_search_index </span><span style="color:#e6e1dc;">= </span><span style="color:#6e9cbe;">false
+
+</span><span style="color:#95815e;"># A list of glob patterns specifying asset files to ignore when
+# processing the content directory.
+# Defaults to none, which means all asset files are copied over to the public folder.
+# Example:
+#     ignored_content = [&quot;*.{graphml,xlsx}&quot;, &quot;temp.*&quot;]
+</span><span style="color:#e8bf6a;">ignored_content </span><span style="color:#e6e1dc;">= []
+
+</span><span style="color:#95815e;"># A list of directories to search for additional `.sublime-syntax` files in.
+</span><span style="color:#e8bf6a;">extra_syntaxes </span><span style="color:#e6e1dc;">= []
+
+</span><span style="color:#95815e;"># Optional translation object. The key if present should be a language code.
+# Example:
+#     default_language = &quot;fr&quot;
+#
+#     [translations]
+#     [translations.fr]
+#     title = &quot;Un titre&quot;
+#
+#     [translations.en]
+#     title = &quot;A title&quot;
+#
+</span><span style="color:#e6e1dc;">[</span><span style="color:#e8bf6a;">translations</span><span style="color:#e6e1dc;">]
+
+</span><span style="color:#95815e;"># You can put any kind of data in there and it
+# will be accessible in all templates
+</span><span style="color:#e6e1dc;">[</span><span style="color:#e8bf6a;">extra</span><span style="color:#e6e1dc;">]
+</span></pre><h2 id="syntax-highlighting"><a class="zola-anchor" href="#syntax-highlighting" aria-label="Anchor link for: syntax-highlighting">🔗</a>Syntax highlighting</h2>
+<p>Zola currently has the following highlight themes available:</p>
+<ul>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/1337">1337</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Agola%20Dark">agola-dark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Ascetic%20White">ascetic-white</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Axar">axar</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Base16%20Ocean%20Dark">base16-ocean-dark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Base16%20Ocean%20Light">base16-ocean-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/BBEdit">bbedit</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Boron">boron</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Charcoal">charcoal</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Cheerfully%20Light">cheerfully-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Classic%20Modified">classic-modified</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Demain">demain</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Dimmed%20Fluid">dimmed-fluid</a></li>
+<li><a href="https://draculatheme.com/">dracula</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Gray%20Matter%20Dark">gray-matter-dark</a></li>
+<li><a href="https://github.com/morhetz/gruvbox">gruvbox-dark</a></li>
+<li><a href="https://github.com/morhetz/gruvbox">gruvbox-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/IDLE">idle</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Inspiredgithub">inspired-github</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/IR_White">ir-white</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Kronuz">kronuz</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Material%20Dark">material-dark</a></li>
+<li><a href="https://github.com/morhetz/gruvbox">material-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Monokai">monokai</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(dark)">solarized-dark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(light)">solarized-light</a></li>
+<li><a href="https://github.com/idleberg/Subway.tmTheme">subway-madrid</a></li>
+<li><a href="https://github.com/idleberg/Subway.tmTheme">subway-moscow</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Visual%20Studio%20Dark">visual-studio-dark</a></li>
+<li><a href="https://github.com/dempfi/ayu">ayu-light</a></li>
+<li><a href="https://github.com/dempfi/ayu">ayu-dark</a></li>
+<li><a href="https://github.com/dempfi/ayu">ayu-mirage</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Tomorrow">Tomorrow</a></li>
+<li><a href="https://github.com/andresmichel/one-dark-theme">one-dark</a></li>
+</ul>
+<p>Zola uses the Sublime Text themes, making it very easy to add more.
+If you want a theme not on that list, please open an issue or a pull request on the <a href="https://github.com/getzola/zola">Zola repo</a>.</p>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Image processing | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Image processing</h1>
+    <p>Zola provides support for automatic image resizing through the built-in function <code>resize_image</code>,
+which is available in template code as well as in shortcodes.</p>
+<p>The function usage is as follows:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">resize_image(path, width, height, op, format, quality)
+</span></pre><h3 id="arguments"><a class="zola-anchor" href="#arguments" aria-label="Anchor link for: arguments">🔗</a>Arguments</h3>
+<ul>
+<li>
+<p><code>path</code>: The path to the source image relative to the <code>content</code> directory in the <a href="https://www.getzola.org/documentation/getting-started/directory-structure/">directory structure</a>.</p>
+</li>
+<li>
+<p><code>width</code> and <code>height</code>: The dimensions in pixels of the resized image. Usage depends on the <code>op</code> argument.</p>
+</li>
+<li>
+<p><code>op</code> (<em>optional</em>): Resize operation. This can be one of:</p>
+<ul>
+<li><code>&quot;scale&quot;</code></li>
+<li><code>&quot;fit_width&quot;</code></li>
+<li><code>&quot;fit_height&quot;</code></li>
+<li><code>&quot;fit&quot;</code></li>
+<li><code>&quot;fill&quot;</code></li>
+</ul>
+<p>What each of these does is explained below. The default is <code>&quot;fill&quot;</code>.</p>
+</li>
+<li>
+<p><code>format</code> (<em>optional</em>): Encoding format of the resized image. May be one of: </p>
+<ul>
+<li><code>&quot;auto&quot;</code></li>
+<li><code>&quot;jpg&quot;</code></li>
+<li><code>&quot;png&quot;</code></li>
+</ul>
+<p>The default is <code>&quot;auto&quot;</code>, this means the format is chosen based on input image format.
+JPEG is chosen for JPEGs and other lossy formats, while PNG is chosen for PNGs and other lossless formats.</p>
+</li>
+<li>
+<p><code>quality</code> (<em>optional</em>): JPEG quality of the resized image, in percents. Only used when encoding JPEGs, default value is <code>75</code>.</p>
+</li>
+</ul>
+<h3 id="image-processing-and-return-value"><a class="zola-anchor" href="#image-processing-and-return-value" aria-label="Anchor link for: image-processing-and-return-value">🔗</a>Image processing and return value</h3>
+<p>Zola performs image processing during the build process and places the resized images in a subdirectory in the static files directory:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">static/processed_images/
+</span></pre>
+<p>Filename of each resized image is a hash of the function arguments,
+which means that once an image is resized in a certain way, it will be stored in the above directory and will not
+need to be resized again during subsequent builds (unless the image itself, the dimensions, or other arguments are changed).
+Therefore, if you have a large number of images, they will only need to be resized once.</p>
+<p>The function returns a full URL to the resized image.</p>
+<h2 id="resize-operations"><a class="zola-anchor" href="#resize-operations" aria-label="Anchor link for: resize-operations">🔗</a>Resize operations</h2>
+<p>The source for all examples is this 300 × 380 pixels image:</p>
+<p><img src="https://www.getzola.org/documentation/content/image-processing/01-zola.png" alt="zola" /></p>
+<h3 id="scale"><a class="zola-anchor" href="#scale" aria-label="Anchor link for: scale">🔗</a><strong><code>&quot;scale&quot;</code></strong></h3>
+<p>Simply scales the image to the specified dimensions (<code>width</code> &amp; <code>height</code>) irrespective of the aspect ratio.</p>
+<p><code>resize_image(..., width=150, height=150, op=&quot;scale&quot;)</code></p>
+<img src="https:&#x2F;&#x2F;www.getzola.org&#x2F;processed_images&#x2F;4c2ee08a8b7c98fd00.png" />
+<h3 id="fit-width"><a class="zola-anchor" href="#fit-width" aria-label="Anchor link for: fit-width">🔗</a><strong><code>&quot;fit_width&quot;</code></strong></h3>
+<p>Resizes the image such that the resulting width is <code>width</code> and height is whatever will preserve the aspect ratio.
+The <code>height</code> argument is not needed.</p>
+<p><code>resize_image(..., width=100, op=&quot;fit_width&quot;)</code></p>
+<img src="https:&#x2F;&#x2F;www.getzola.org&#x2F;processed_images&#x2F;60097aeed903cf3b00.png" />
+<h3 id="fit-height"><a class="zola-anchor" href="#fit-height" aria-label="Anchor link for: fit-height">🔗</a><strong><code>&quot;fit_height&quot;</code></strong></h3>
+<p>Resizes the image such that the resulting height is <code>height</code> and width is whatever will preserve the aspect ratio.
+The <code>width</code> argument is not needed.</p>
+<p><code>resize_image(..., height=150, op=&quot;fit_height&quot;)</code></p>
+<img src="https:&#x2F;&#x2F;www.getzola.org&#x2F;processed_images&#x2F;a9f5475850972f8500.png" />
+<h3 id="fit"><a class="zola-anchor" href="#fit" aria-label="Anchor link for: fit">🔗</a><strong><code>&quot;fit&quot;</code></strong></h3>
+<p>Like <code>&quot;fit_width&quot;</code> and <code>&quot;fit_height&quot;</code> combined, but only resize if the image is bigger than any of the specified dimensions.
+This mode is handy, if e.g. images are automatically shrinked to certain sizes in a shortcode for mobile optimization.
+Resizes the image such that the result fits within <code>width</code> and <code>height</code> preserving aspect ratio. This means that both width or height
+will be at max <code>width</code> and <code>height</code>, respectively, but possibly one of them smaller so as to preserve the aspect ratio.</p>
+<p><code>resize_image(..., width=5000, height=5000, op=&quot;fit&quot;)</code></p>
+<img src="https:&#x2F;&#x2F;www.getzola.org&#x2F;processed_images&#x2F;e8e628f3be10e77c00.png" />
+<p><code>resize_image(..., width=150, height=150, op=&quot;fit&quot;)</code></p>
+<img src="https:&#x2F;&#x2F;www.getzola.org&#x2F;processed_images&#x2F;baf5a4139772f2c700.png" />
+<h3 id="fill"><a class="zola-anchor" href="#fill" aria-label="Anchor link for: fill">🔗</a><strong><code>&quot;fill&quot;</code></strong></h3>
+<p>This is the default operation. It takes the image's center part with the same aspect ratio as the <code>width</code> &amp; <code>height</code> given and resizes that
+to <code>width</code> &amp; <code>height</code>. This means that parts of the image that are outsize of the resized aspect ratio are cropped away.</p>
+<p><code>resize_image(..., width=150, height=150, op=&quot;fill&quot;)</code></p>
+<img src="https:&#x2F;&#x2F;www.getzola.org&#x2F;processed_images&#x2F;7459e23e962c9d2f00.png" />
+<h2 id="using-resize-image-in-markdown-via-shortcodes"><a class="zola-anchor" href="#using-resize-image-in-markdown-via-shortcodes" aria-label="Anchor link for: using-resize-image-in-markdown-via-shortcodes">🔗</a>Using <code>resize_image</code> in markdown via shortcodes</h2>
+<p><code>resize_image</code> is a built-in Tera global function (see the <a href="https://www.getzola.org/documentation/templates/">Templates</a> chapter),
+but it can be used in markdown, too, using <a href="https://www.getzola.org/documentation/content/shortcodes/">Shortcodes</a>.</p>
+<p>The examples above were generated using a shortcode file named <code>resize_image.html</code> with this content:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">  &lt;</span><span style="color:#e8bf6a;">img src</span><span style="color:#86c20e;">=</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#c1be91;">{{ resize_image(path=path, width=width, height=height, op=op) }}</span><span style="color:#e6e1dc;">&quot; /&gt;
+</span></pre><h2 id="creating-picture-galleries"><a class="zola-anchor" href="#creating-picture-galleries" aria-label="Anchor link for: creating-picture-galleries">🔗</a>Creating picture galleries</h2>
+<p>The <code>resize_image()</code> can be used multiple times and/or in loops. It is designed to handle this efficiently.</p>
+<p>This can be used along with <code>assets</code> <a href="https://www.getzola.org/documentation/templates/pages-sections/">page metadata</a> to create picture galleries.
+The <code>assets</code> variable holds paths to all assets in the directory of a page with resources
+(see <a href="https://www.getzola.org/documentation/content/overview/#assets-colocation">assets colocation</a>): if you have files other than images you
+will need to filter them out in the loop first like in the example below.</p>
+<p>This can be used in shortcodes. For example, we can create a very simple html-only clickable
+picture gallery with the following shortcode named <code>gallery.html</code>:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">{% </span><span style="color:#cc7833;">for </span><span style="color:#d0d0ff;">asset </span><span style="color:#cc7833;">in </span><span style="color:#d0d0ff;">page</span><span style="color:#e6e1dc;">.</span><span style="color:#d0d0ff;">assets </span><span style="color:#e6e1dc;">%}
+  {% </span><span style="color:#cc7833;">if </span><span style="color:#d0d0ff;">asset </span><span style="color:#cc7833;">is </span><span style="color:#d0d0ff;">matching</span><span style="color:#e6e1dc;">(</span><span style="color:#c1be91;">&quot;[.](jpg|png)$&quot;</span><span style="color:#e6e1dc;">) %}
+    &lt;</span><span style="color:#e8bf6a;">a href</span><span style="color:#86c20e;">=</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#c1be91;">{{ get_url(path=asset) }}</span><span style="color:#e6e1dc;">&quot;&gt;
+      &lt;</span><span style="color:#e8bf6a;">img src</span><span style="color:#86c20e;">=</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#c1be91;">{{ resize_image(path=asset, width=240, height=180, op=</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#e8bf6a;">fill&quot;) }}&quot;</span><span style="color:#e6e1dc;"> /&gt;
+    &lt;/</span><span style="color:#e8bf6a;">a</span><span style="color:#e6e1dc;">&gt;
+    </span><span style="color:#6d9cbe;">&amp;ensp;
+  </span><span style="color:#e6e1dc;">{% </span><span style="color:#cc7833;">endif </span><span style="color:#e6e1dc;">%}
+{% </span><span style="color:#cc7833;">endfor </span><span style="color:#e6e1dc;">%}
+</span></pre>
+<p>As you can notice, we didn't specify an <code>op</code> argument, which means it'll default to <code>&quot;fill&quot;</code>. Similarly, the format will default to
+<code>&quot;auto&quot;</code> (choosing PNG or JPEG as appropriate) and the JPEG quality will default to <code>75</code>.</p>
+<p>To call it from a markdown file, simply do:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">{{ </span><span style="color:#d0d0ff;">gallery</span><span style="color:#e6e1dc;">() }}
+</span></pre>
+<p>Here is the result:</p>
+<a href="https://www.getzola.org/documentation/content/image-processing/02-zola-manet.png" target="_blank">
+      <img src="https://www.getzola.org/processed_images/60327c08d512e16800.png" />
+    </a><a href="https://www.getzola.org/documentation/content/image-processing/07-example.jpg" target="_blank">
+      <img src="https://www.getzola.org/processed_images/67f2ebdd806283e900.jpg" />
+    </a><a href="https://www.getzola.org/documentation/content/image-processing/08-example.jpg" target="_blank">
+      <img src="https://www.getzola.org/processed_images/aebd0f00cf9232d000.jpg" />
+    </a><a href="https://www.getzola.org/documentation/content/image-processing/01-zola.png" target="_blank">
+      <img src="https://www.getzola.org/processed_images/1cec18975099962e00.png" />
+    </a><a href="https://www.getzola.org/documentation/content/image-processing/06-example.jpg" target="_blank">
+      <img src="https://www.getzola.org/processed_images/1794115ed20fc20b00.jpg" />
+    </a><a href="https://www.getzola.org/documentation/content/image-processing/04-gutenberg.jpg" target="_blank">
+      <img src="https://www.getzola.org/processed_images/d364fb703e1e0b3200.jpg" />
+    </a><a href="https://www.getzola.org/documentation/content/image-processing/05-example.jpg" target="_blank">
+      <img src="https://www.getzola.org/processed_images/70513837257b310c00.jpg" />
+    </a><a href="https://www.getzola.org/documentation/content/image-processing/03-zola-cezanne.png" target="_blank">
+      <img src="https://www.getzola.org/processed_images/e1f961e8b8cb30b500.png" />
+    </a>
+<small>
+  Image attribution: Public domain, except: _06-example.jpg_: Willi Heidelbach, _07-example.jpg_: Daniel Ullrich.
+</small>
+<h2 id="get-image-size"><a class="zola-anchor" href="#get-image-size" aria-label="Anchor link for: get-image-size">🔗</a>Get image size</h2>
+<p>Sometimes when building a gallery it is useful to know the dimensions of each asset.  You can get this information with
+<a href="https://www.getzola.org/documentation/templates/overview/#get-image-metadata">get_image_metadata</a> </p>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

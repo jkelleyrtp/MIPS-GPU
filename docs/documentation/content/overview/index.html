@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Overview | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Overview</h1>
+    <p>Zola uses the folder structure to determine the site structure.
+Each folder in the <code>content</code> directory represents a <a href="https://www.getzola.org/documentation/content/section/">section</a>
+that contains <a href="https://www.getzola.org/documentation/content/page/">pages</a>: your <code>.md</code> files.</p>
+<pre style="background-color:#383838;">
+<span style="color:#da4939;">.
+</span><span style="color:#e6e1dc;">└── content
+    ├── content
+    │   └── something.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/content/something/
+    ├── blog
+    │   ├── cli-usage.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/blog/cli-usage/
+    │   ├── configuration.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/blog/configuration/
+    │   ├── directory-structure.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/blog/directory-structure/
+    │   ├── _index.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/blog/
+    │   └── installation.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/blog/installation/
+    └── landing
+        └── _index.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/landing/
+</span></pre>
+<p>Each page path (the part after the <code>base_url</code>, for example <code>blog/cli-usage/</code>) can be customised by changing the <code>path</code> or <code>slug</code>
+attribute of the <a href="https://www.getzola.org/documentation/content/page/#front-matter">page front-matter</a>.</p>
+<p>You might have noticed a file named <code>_index.md</code> in the example above.
+This file is used to store both metadata and content of the section itself and is not considered a page.</p>
+<p>To make sure the terminology used in the rest of the documentation is understood, let's go over the example above.</p>
+<p>The <code>content</code> directory in this case has three <code>sections</code>: <code>content</code>, <code>blog</code> and <code>landing</code>. The <code>content</code> section has only
+one page, <code>something.md</code>, the <code>landing</code> section has no page and the <code>blog</code> section has 4 pages: <code>cli-usage.md</code>, <code>configuration.md</code>, <code>directory-structure.md</code>
+and <code>installation.md</code>.</p>
+<p>While not shown in the example, sections can be nested indefinitely.</p>
+<h2 id="assets-colocation"><a class="zola-anchor" href="#assets-colocation" aria-label="Anchor link for: assets-colocation">🔗</a>Assets colocation</h2>
+<p>The <code>content</code> directory is not limited to markup files though: it's natural to want to co-locate a page and some related
+assets, for instance images or spreadsheets. Zola supports that pattern out of the box for both sections and pages.</p>
+<p>Any non-markdown file you add in the page/section folder will be copied alongside the generated page when building the site,
+which allows us to use a relative path to access them.</p>
+<p>For pages to use assets colocation, they should not be placed directly in their section folder (such as <code>latest-experiment.md</code>), but as an <code>index.md</code> file
+in a dedicated folder (<code>latest-experiment/index.md</code>), like so:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">└── research
+    ├── latest-experiment
+    │   ├── index.md
+    │   └── yavascript.js
+    ├── _index.md
+    └── research.jpg
+</span></pre>
+<p>In this setup, you may access <code>research.jpg</code> from your 'research' section,
+and <code>yavascript.js</code> from your 'latest-experiment' directly within the Markdown:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">Check out the complete program [here](</span><span style="text-decoration:underline;color:#86c20e;">yavascript.js</span><span style="color:#e6e1dc;">). It&#39;s </span><span style="font-weight:bold;color:#f92672;">**really cool free-software**</span><span style="color:#e6e1dc;">!
+</span></pre>
+<p>By default, this page will get the folder name as its slug. So its permalink would be in the form of <code>https://example.com/research/latest-experiment/</code></p>
+<h3 id="excluding-files-from-assets"><a class="zola-anchor" href="#excluding-files-from-assets" aria-label="Anchor link for: excluding-files-from-assets">🔗</a>Excluding files from assets</h3>
+<p>It is possible to ignore selected asset files using the
+<a href="https://www.getzola.org/documentation/getting-started/configuration/">ignored_content</a> setting in the config file.
+For example, say you have an Excel spreadsheet from which you are taking several screenshots and
+then linking to those image files on your website. For maintainability purposes, you want to keep
+the spreadsheet in the same folder as the markdown, but you don't want to copy the spreadsheet to
+the public web site. You can achieve this by simply setting <code>ignored_content</code> in the config file:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">ignored_content = [&quot;*.xlsx&quot;]
+</span></pre><h2 id="static-assets"><a class="zola-anchor" href="#static-assets" aria-label="Anchor link for: static-assets">🔗</a>Static assets</h2>
+<p>In addition to placing content files in the <code>content</code> directory, you may also place content
+files in the <code>static</code> directory.  Any files/folders that you place in the <code>static</code> directory
+will be copied, without modification, to the public directory.</p>
+<p>Typically, you might put site-wide assets (such as the site favicon, site logos or site-wide
+JavaScript) in the root of the static directory.  You can also place any HTML or other files that
+you wish to be included without modification (that is, without being parsed as Markdown files)
+into the static directory.</p>
+<p>Note that the static folder provides an <em>alternative</em> to colocation.  For example, imagine that you
+had the following directory structure (a simplified version of the structure presented above):</p>
+<pre style="background-color:#383838;">
+<span style="color:#da4939;">.
+</span><span style="color:#e6e1dc;">└── content
+    └── blog
+        ├── configuration
+        │    └── index.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/blog/configuration/
+        └── _index.md // -</span><span style="color:#cc7833;">&gt;</span><span style="color:#e6e1dc;"> https://mywebsite.com/blog/
+</span></pre>
+<p>If you wanted to add an image to the <code>https://mywebsite.com/blog/configuration</code> page, you would
+have three options:</p>
+<ul>
+<li>You could save the image to the <code>content/blog/configuration</code> folder and then link it with a
+relative path from the <code>index.md</code> page.  This is the approach described under <strong>colocation</strong>,
+above.</li>
+<li>You could save the image to a <code>static/blog/configuration</code> folder and link it in exactly the
+same way as if you had colocated it.  If you do this, the generated files will be identical to
+if you had colocated; the only difference will be that all static files will be saved in the
+static folder rather than in the content folder.  Depending on your organizational needs, this
+may be better or worse.</li>
+<li>Or you could save the image to some arbitrary folder within the static folder.  For example,
+you could save all images to <code>static/images</code>.  Using this approach, you would no longer be able
+to use relative links, but could use an absolute link to <code>images/[filename]</code> to access your
+image.  This might be preferable for small sites or for sites that associate images with
+multiple pages (e.g., logo images that appear on every page).</li>
+</ul>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

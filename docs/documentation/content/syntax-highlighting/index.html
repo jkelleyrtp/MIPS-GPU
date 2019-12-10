@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Syntax Highlighting | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Syntax Highlighting</h1>
+    <p>Zola comes with built-in syntax highlighting but you first
+need to enable it in the <a href="https://www.getzola.org/documentation/getting-started/configuration/">configuration</a>.</p>
+<p>Once this is done, Zola will automatically highlight all code blocks
+in your content. A code block in Markdown looks like the following:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">
+</span><span style="color:#ec3533;">```rust
+let highlight = true;
+```
+
+</span></pre>
+<p>You can replace the <code>rust</code> by the language you want to highlight or not put anything to get it
+interpreted as plain text.</p>
+<p>Here is a full list of the supported languages and the short names you can use:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">- Plain Text -&gt; [&quot;txt&quot;]
+- Assembly x86 (NASM) -&gt; [&quot;asm&quot;, &quot;inc&quot;, &quot;nasm&quot;]
+- Crystal -&gt; [&quot;cr&quot;]
+- Dart -&gt; [&quot;dart&quot;]
+- Elixir -&gt; [&quot;ex&quot;, &quot;exs&quot;]
+- fsharp -&gt; [&quot;fs&quot;]
+- Handlebars -&gt; [&quot;handlebars&quot;, &quot;handlebars.html&quot;, &quot;hbr&quot;, &quot;hbrs&quot;, &quot;hbs&quot;, &quot;hdbs&quot;, &quot;hjs&quot;, &quot;mu&quot;, &quot;mustache&quot;, &quot;rac&quot;, &quot;stache&quot;, &quot;template&quot;, &quot;tmpl&quot;]
+- Jinja2 -&gt; [&quot;j2&quot;, &quot;jinja2&quot;]
+- Julia -&gt; [&quot;jl&quot;]
+- Kotlin -&gt; [&quot;kt&quot;, &quot;kts&quot;]
+- Less -&gt; [&quot;less&quot;, &quot;css.less&quot;]
+- MiniZinc (MZN) -&gt; [&quot;mzn&quot;, &quot;dzn&quot;]
+- Nim -&gt; [&quot;nim&quot;, &quot;nims&quot;]
+- ASP -&gt; [&quot;asa&quot;]
+- HTML (ASP) -&gt; [&quot;asp&quot;]
+- ActionScript -&gt; [&quot;as&quot;]
+- AppleScript -&gt; [&quot;applescript&quot;, &quot;script editor&quot;]
+- Batch File -&gt; [&quot;bat&quot;, &quot;cmd&quot;]
+- NAnt Build File -&gt; [&quot;build&quot;]
+- C# -&gt; [&quot;cs&quot;, &quot;csx&quot;]
+- C++ -&gt; [&quot;cpp&quot;, &quot;cc&quot;, &quot;cp&quot;, &quot;cxx&quot;, &quot;c++&quot;, &quot;C&quot;, &quot;h&quot;, &quot;hh&quot;, &quot;hpp&quot;, &quot;hxx&quot;, &quot;h++&quot;, &quot;inl&quot;, &quot;ipp&quot;]
+- C -&gt; [&quot;c&quot;, &quot;h&quot;]
+- CSS -&gt; [&quot;css&quot;, &quot;css.erb&quot;, &quot;css.liquid&quot;]
+- Clojure -&gt; [&quot;clj&quot;]
+- D -&gt; [&quot;d&quot;, &quot;di&quot;]
+- Diff -&gt; [&quot;diff&quot;, &quot;patch&quot;]
+- Erlang -&gt; [&quot;erl&quot;, &quot;hrl&quot;, &quot;Emakefile&quot;, &quot;emakefile&quot;]
+- HTML (Erlang) -&gt; [&quot;yaws&quot;]
+- Git Attributes -&gt; [&quot;attributes&quot;, &quot;gitattributes&quot;, &quot;.gitattributes&quot;]
+- Git Commit -&gt; [&quot;COMMIT_EDITMSG&quot;, &quot;MERGE_MSG&quot;, &quot;TAG_EDITMSG&quot;]
+- Git Config -&gt; [&quot;gitconfig&quot;, &quot;.gitconfig&quot;, &quot;.gitmodules&quot;]
+- Git Ignore -&gt; [&quot;exclude&quot;, &quot;gitignore&quot;, &quot;.gitignore&quot;]
+- Git Link -&gt; [&quot;.git&quot;]
+- Git Log -&gt; [&quot;gitlog&quot;]
+- Git Rebase Todo -&gt; [&quot;git-rebase-todo&quot;]
+- Go -&gt; [&quot;go&quot;]
+- Graphviz (DOT) -&gt; [&quot;dot&quot;, &quot;DOT&quot;, &quot;gv&quot;]
+- Groovy -&gt; [&quot;groovy&quot;, &quot;gvy&quot;, &quot;gradle&quot;, &quot;Jenkinsfile&quot;]
+- HTML -&gt; [&quot;html&quot;, &quot;htm&quot;, &quot;shtml&quot;, &quot;xhtml&quot;]
+- Haskell -&gt; [&quot;hs&quot;]
+- Literate Haskell -&gt; [&quot;lhs&quot;]
+- Java Server Page (JSP) -&gt; [&quot;jsp&quot;]
+- Java -&gt; [&quot;java&quot;, &quot;bsh&quot;]
+- Java Properties -&gt; [&quot;properties&quot;]
+- JSON -&gt; [&quot;json&quot;, &quot;sublime-settings&quot;, &quot;sublime-menu&quot;, &quot;sublime-keymap&quot;, &quot;sublime-mousemap&quot;, &quot;sublime-theme&quot;, &quot;sublime-build&quot;, &quot;sublime-project&quot;, &quot;sublime-completions&quot;, &quot;sublime-commands&quot;, &quot;sublime-macro&quot;, &quot;sublime-color-scheme&quot;]
+- JavaScript -&gt; [&quot;js&quot;, &quot;htc&quot;]
+- BibTeX -&gt; [&quot;bib&quot;]
+- LaTeX -&gt; [&quot;tex&quot;, &quot;ltx&quot;]
+- TeX -&gt; [&quot;sty&quot;, &quot;cls&quot;]
+- Lisp -&gt; [&quot;lisp&quot;, &quot;cl&quot;, &quot;clisp&quot;, &quot;l&quot;, &quot;mud&quot;, &quot;el&quot;, &quot;scm&quot;, &quot;ss&quot;, &quot;lsp&quot;, &quot;fasl&quot;]
+- Lua -&gt; [&quot;lua&quot;]
+- Makefile -&gt; [&quot;make&quot;, &quot;GNUmakefile&quot;, &quot;makefile&quot;, &quot;Makefile&quot;, &quot;makefile.am&quot;, &quot;Makefile.am&quot;, &quot;makefile.in&quot;, &quot;Makefile.in&quot;, &quot;OCamlMakefile&quot;, &quot;mak&quot;, &quot;mk&quot;]
+- Markdown -&gt; [&quot;md&quot;, &quot;mdown&quot;, &quot;markdown&quot;, &quot;markdn&quot;]
+- MATLAB -&gt; [&quot;matlab&quot;]
+- OCaml -&gt; [&quot;ml&quot;, &quot;mli&quot;]
+- OCamllex -&gt; [&quot;mll&quot;]
+- OCamlyacc -&gt; [&quot;mly&quot;]
+- Objective-C++ -&gt; [&quot;mm&quot;, &quot;M&quot;, &quot;h&quot;]
+- Objective-C -&gt; [&quot;m&quot;, &quot;h&quot;]
+- PHP -&gt; [&quot;php&quot;, &quot;php3&quot;, &quot;php4&quot;, &quot;php5&quot;, &quot;php7&quot;, &quot;phps&quot;, &quot;phpt&quot;, &quot;phtml&quot;]
+- Pascal -&gt; [&quot;pas&quot;, &quot;p&quot;, &quot;dpr&quot;]
+- Perl -&gt; [&quot;pl&quot;, &quot;pm&quot;, &quot;pod&quot;, &quot;t&quot;, &quot;PL&quot;]
+- Python -&gt; [&quot;py&quot;, &quot;py3&quot;, &quot;pyw&quot;, &quot;pyi&quot;, &quot;pyx&quot;, &quot;pyx.in&quot;, &quot;pxd&quot;, &quot;pxd.in&quot;, &quot;pxi&quot;, &quot;pxi.in&quot;, &quot;rpy&quot;, &quot;cpy&quot;, &quot;SConstruct&quot;, &quot;Sconstruct&quot;, &quot;sconstruct&quot;, &quot;SConscript&quot;, &quot;gyp&quot;, &quot;gypi&quot;, &quot;Snakefile&quot;, &quot;wscript&quot;]
+- R -&gt; [&quot;R&quot;, &quot;r&quot;, &quot;s&quot;, &quot;S&quot;, &quot;Rprofile&quot;]
+- Rd (R Documentation) -&gt; [&quot;rd&quot;]
+- HTML (Rails) -&gt; [&quot;rails&quot;, &quot;rhtml&quot;, &quot;erb&quot;, &quot;html.erb&quot;]
+- JavaScript (Rails) -&gt; [&quot;js.erb&quot;]
+- Ruby Haml -&gt; [&quot;haml&quot;, &quot;sass&quot;]
+- Ruby on Rails -&gt; [&quot;rxml&quot;, &quot;builder&quot;]
+- SQL (Rails) -&gt; [&quot;erbsql&quot;, &quot;sql.erb&quot;]
+- Regular Expression -&gt; [&quot;re&quot;]
+- reStructuredText -&gt; [&quot;rst&quot;, &quot;rest&quot;]
+- Ruby -&gt; [&quot;rb&quot;, &quot;Appfile&quot;, &quot;Appraisals&quot;, &quot;Berksfile&quot;, &quot;Brewfile&quot;, &quot;capfile&quot;, &quot;cgi&quot;, &quot;Cheffile&quot;, &quot;config.ru&quot;, &quot;Deliverfile&quot;, &quot;Fastfile&quot;, &quot;fcgi&quot;, &quot;Gemfile&quot;, &quot;gemspec&quot;, &quot;Guardfile&quot;, &quot;irbrc&quot;, &quot;jbuilder&quot;, &quot;podspec&quot;, &quot;prawn&quot;, &quot;rabl&quot;, &quot;rake&quot;, &quot;Rakefile&quot;, &quot;Rantfile&quot;, &quot;rbx&quot;, &quot;rjs&quot;, &quot;ruby.rail&quot;, &quot;Scanfile&quot;, &quot;simplecov&quot;, &quot;Snapfile&quot;, &quot;thor&quot;, &quot;Thorfile&quot;, &quot;Vagrantfile&quot;]
+- Rust -&gt; [&quot;rs&quot;]
+- SQL -&gt; [&quot;sql&quot;, &quot;ddl&quot;, &quot;dml&quot;]
+- Scala -&gt; [&quot;scala&quot;, &quot;sbt&quot;]
+- Bourne Again Shell (bash) -&gt; [&quot;sh&quot;, &quot;bash&quot;, &quot;zsh&quot;, &quot;fish&quot;, &quot;.bash_aliases&quot;, &quot;.bash_completions&quot;, &quot;.bash_functions&quot;, &quot;.bash_login&quot;, &quot;.bash_logout&quot;, &quot;.bash_profile&quot;, &quot;.bash_variables&quot;, &quot;.bashrc&quot;, &quot;.profile&quot;, &quot;.textmate_init&quot;, &quot;.zshrc&quot;]
+- HTML (Tcl) -&gt; [&quot;adp&quot;]
+- Tcl -&gt; [&quot;tcl&quot;]
+- Textile -&gt; [&quot;textile&quot;]
+- XML -&gt; [&quot;xml&quot;, &quot;xsd&quot;, &quot;xslt&quot;, &quot;tld&quot;, &quot;dtml&quot;, &quot;rss&quot;, &quot;opml&quot;, &quot;svg&quot;]
+- YAML -&gt; [&quot;yaml&quot;, &quot;yml&quot;, &quot;sublime-syntax&quot;]
+- PowerShell -&gt; [&quot;ps1&quot;, &quot;psm1&quot;, &quot;psd1&quot;]
+- SWI-Prolog -&gt; [&quot;pro&quot;]
+- Reason -&gt; [&quot;re&quot;, &quot;rei&quot;]
+- CMake C Header -&gt; [&quot;h.in&quot;]
+- CMake C++ Header -&gt; [&quot;hh.in&quot;, &quot;hpp.in&quot;, &quot;hxx.in&quot;, &quot;h++.in&quot;]
+- CMake -&gt; [&quot;CMakeLists.txt&quot;, &quot;cmake&quot;]
+- CMakeCache -&gt; [&quot;CMakeCache.txt&quot;]
+- Generic Config -&gt; [&quot;cfg&quot;, &quot;conf&quot;, &quot;config&quot;, &quot;ini&quot;, &quot;pro&quot;, &quot;mak&quot;, &quot;mk&quot;, &quot;Doxyfile&quot;, &quot;inputrc&quot;, &quot;.inputrc&quot;, &quot;dircolors&quot;, &quot;.dircolors&quot;, &quot;gitmodules&quot;, &quot;.gitmodules&quot;, &quot;gitignore&quot;, &quot;.gitignore&quot;, &quot;gitattributes&quot;, &quot;.gitattributes&quot;]
+- Elm -&gt; [&quot;elm&quot;]
+- Linker Script -&gt; [&quot;ld&quot;]
+- Swift -&gt; [&quot;swift&quot;]
+- TOML -&gt; [&quot;toml&quot;, &quot;tml&quot;]
+- TypeScript -&gt; [&quot;ts&quot;]
+- TypeScriptReact -&gt; [&quot;tsx&quot;]
+- VimL -&gt; [&quot;vim&quot;]
+- Nix -&gt; [&quot;nix&quot;]
+- TOML -&gt; [&quot;toml&quot;, &quot;tml&quot;, &quot;Cargo.lock&quot;, &quot;Gopkg.lock&quot;, &quot;Pipfile&quot;]
+</span></pre>
+<p>If you want to highlight a language not on that list, please open an issue or a pull request on the <a href="https://github.com/getzola/zola">Zola repo</a>.
+Alternatively, the <code>extra_syntaxes</code> config option can be used to add additional syntax files.</p>
+<p>If your site source is laid out as follows:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">.
+├── config.toml
+├── content/
+│   └── ...
+├── static/
+│   └── ...
+├── syntaxes/
+│   ├── Sublime-Language1/
+│   │   └── lang1.sublime-syntax
+│   └── lang2.sublime-syntax
+└── templates/
+    └── ...
+</span></pre>
+<p>you would set your <code>extra_syntaxes</code> to <code>[&quot;syntaxes&quot;, &quot;syntaxes/Sublime-Language1&quot;]</code> in order to load <code>lang1.sublime-syntax</code> and <code>lang2.sublime-syntax</code>.</p>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>

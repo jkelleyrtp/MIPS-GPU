@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A simple MIPS general purpose parallel processing unit designed in Verilog">
+        <meta name="author" content="Vincent Prouillet">
+        <title>Shortcodes | MIPS GPU </title>
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;site.css"/>
+        <link rel="icon" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;favicon.ico">
+    </head>
+    <body>
+
+        <header>
+            <nav class="">
+                <a class="header__logo white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;">Zola</a>
+                <a class="white" href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;" class="nav-link">Docs</a>
+                <a class="white" href="https://github.com/getzola/zola" class="nav-link">GitHub</a>
+
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="🔎 Search the docs">
+
+                    <div class="search-results">
+                        <div class="search-results__items"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content content--reversed">
+            
+
+<div class="documentation">
+    <aside class="documentation__sidebar">
+        <ul>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Getting Started</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;">Installation</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;cli-usage&#x2F;">CLI usage</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;directory-structure&#x2F;">Directory structure</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;">Configuration</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Content</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;section&#x2F;">Section</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;page&#x2F;">Page</a>
+                        </li>
+                    
+                        <li class="active">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;">Shortcodes</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;linking&#x2F;">Internal links &amp; deep linking</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;table-of-contents&#x2F;">Table of Contents</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;syntax-highlighting&#x2F;">Syntax Highlighting</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;search&#x2F;">Search</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;sass&#x2F;">Sass</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;">Image processing</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;multilingual&#x2F;">Multilingual sites</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Templates</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;">Sections and Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pagination&#x2F;">Pagination</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;taxonomies&#x2F;">Taxonomies</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;rss&#x2F;">RSS</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;sitemap&#x2F;">Sitemap</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;robots&#x2F;">Robots.txt</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;404&#x2F;">404 error page</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;archive&#x2F;">Archive</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+            
+            <li>
+                <span class="documentation__sidebar__title">Deployment</span>
+                <ul>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;overview&#x2F;">Overview</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;netlify&#x2F;">Netlify</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;github-pages&#x2F;">GitHub Pages</a>
+                        </li>
+                    
+                        <li class="">
+                            <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;deployment&#x2F;gitlab-pages&#x2F;">GitLab Pages</a>
+                        </li>
+                    
+                </ul>
+            </li>
+        
+        </ul>
+    </aside>
+    <div class="documentation__content">
+        
+    <h1>Shortcodes</h1>
+    <p>While Markdown is good at writing, it isn't great when you need write inline
+HTML to add some styling for example.</p>
+<p>To solve this, Zola borrows the concept of <a href="https://codex.wordpress.org/Shortcode_API">shortcodes</a>
+from WordPress.
+In our case, the shortcode corresponds to a template that is defined in the <code>templates/shortcodes</code> directory or a built-in one that can
+be used in a Markdown file. If you want to use something similar to shortcodes in your templates, try <a href="https://tera.netlify.com/docs#macros">Tera macros</a>.</p>
+<h2 id="writing-a-shortcode"><a class="zola-anchor" href="#writing-a-shortcode" aria-label="Anchor link for: writing-a-shortcode">🔗</a>Writing a shortcode</h2>
+<p>Let's write a shortcode to embed YouTube videos as an example.
+In a file called <code>youtube.html</code> in the <code>templates/shortcodes</code> directory, paste the
+following:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">&lt;</span><span style="color:#e8bf6a;">div {% if class %}class</span><span style="color:#86c20e;">=</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#c1be91;">{{class}}</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#e8bf6a;">{% endif %}</span><span style="color:#e6e1dc;">&gt;
+    &lt;</span><span style="color:#e8bf6a;">iframe
+        src</span><span style="color:#86c20e;">=</span><span style="color:#e6e1dc;">&quot;</span><span style="color:#c1be91;">https://www.youtube.com/embed/{{id}}{% if autoplay %}?autoplay=1{% endif %}</span><span style="color:#e6e1dc;">&quot;
+        </span><span style="color:#e8bf6a;">webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen</span><span style="color:#e6e1dc;">&gt;
+    &lt;/</span><span style="color:#e8bf6a;">iframe</span><span style="color:#e6e1dc;">&gt;
+&lt;/</span><span style="color:#e8bf6a;">div</span><span style="color:#e6e1dc;">&gt;
+</span></pre>
+<p>This template is very straightforward: an iframe pointing to the YouTube embed URL wrapped in a <code>&lt;div&gt;</code>.
+In terms of input, it expects at least one variable: <code>id</code>. Since the other variables
+are in a <code>if</code> statement, we can assume they are optional.</p>
+<p>That's it, Zola will now recognise this template as a shortcode named <code>youtube</code> (the filename minus the <code>.html</code> extension).</p>
+<p>The markdown renderer will wrap an inline HTML node like <code>&lt;a&gt;</code> or <code>&lt;span&gt;</code> into a paragraph. If you want to disable that,
+simply wrap your shortcode in a <code>div</code>.</p>
+<p>Shortcodes are rendered before parsing the markdown so it doesn't have access to the table of contents. Because of that,
+you also cannot use the <code>get_page</code>/<code>get_section</code>/<code>get_taxonomy</code> global function. It might work while running <code>zola serve</code> because
+it has been loaded but it will fail during <code>zola build</code>.</p>
+<h2 id="using-shortcodes"><a class="zola-anchor" href="#using-shortcodes" aria-label="Anchor link for: using-shortcodes">🔗</a>Using shortcodes</h2>
+<p>There are two kinds of shortcodes:</p>
+<ul>
+<li>ones that do not take a body like the YouTube example above</li>
+<li>ones that do, a quote for example</li>
+</ul>
+<p>In both cases, their arguments must be named and they will all be passed to the template.</p>
+<p>Lastly, a shortcode name (and thus the corresponding <code>.html</code> file) as well as the arguments name
+can only contain numbers, letters and underscores, or in Regex terms the following: <code>[0-9A-Za-z_]</code>.
+While theoretically an argument name could be a number, it will not be possible to use it in the template in that case.</p>
+<p>Argument values can be of 5 types:</p>
+<ul>
+<li>string: surrounded by double quotes, single quotes or backticks</li>
+<li>bool: <code>true</code> or <code>false</code></li>
+<li>float: a number with a <code>.</code> in it</li>
+<li>integer: a number without a <code>.</code> in it</li>
+<li>array: an array of any kind of values, except arrays</li>
+</ul>
+<p>Malformed values will be silently ignored.</p>
+<p>Both type of shortcodes will also get either a <code>page</code> or <code>section</code> variable depending on where they were used and a <code>config</code>
+one. Those values will overwrite any arguments passed to a shortcode so shortcodes should not use arguments called like one
+of these.</p>
+<h3 id="shortcodes-without-body"><a class="zola-anchor" href="#shortcodes-without-body" aria-label="Anchor link for: shortcodes-without-body">🔗</a>Shortcodes without body</h3>
+<p>Simply call the shortcode as if it was a Tera function in a variable block. All the examples below are valid
+calls of the YouTube shortcode.</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">Here is a YouTube video:
+
+{{ youtube(id=&quot;dQw4w9WgXcQ&quot;) }}
+
+{{ youtube(id=&quot;dQw4w9WgXcQ&quot;, autoplay=true) }}
+
+An inline {{ youtube(id=&quot;dQw4w9WgXcQ&quot;, autoplay=true, class=&quot;youtube&quot;) }} shortcode
+</span></pre>
+<p>Note that if you want to have some content that looks like a shortcode but not have Zola try to render it,
+you will need to escape it by using <code>{{/*</code> and <code>*/}}</code> instead of <code>{{</code> and <code>}}</code>.</p>
+<h3 id="shortcodes-with-body"><a class="zola-anchor" href="#shortcodes-with-body" aria-label="Anchor link for: shortcodes-with-body">🔗</a>Shortcodes with body</h3>
+<p>For example, let's imagine we have the following shortcode <code>quote.html</code> template:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">&lt;</span><span style="color:#e8bf6a;">blockquote</span><span style="color:#e6e1dc;">&gt;
+    {{ </span><span style="color:#d0d0ff;">body </span><span style="color:#e6e1dc;">}} &lt;</span><span style="color:#e8bf6a;">br</span><span style="color:#e6e1dc;">&gt;
+    -- {{ </span><span style="color:#d0d0ff;">author</span><span style="color:#e6e1dc;">}}
+&lt;/</span><span style="color:#e8bf6a;">blockquote</span><span style="color:#e6e1dc;">&gt;
+</span></pre>
+<p>We could use it in our markup file like so:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">As someone said:
+
+{% quote(author=&quot;Vincent&quot;) %}
+A quote
+{% end %}
+</span></pre>
+<p>The body of the shortcode will be automatically passed down to the rendering context as the <code>body</code> variable and needs
+to be in a newline.</p>
+<p>If you want to have some content that looks like a shortcode but not have Zola try to render it,
+you will need to escape it by using <code>{%/*</code> and <code>*/%}</code> instead of <code>{%</code> and <code>%}</code>. You won't need to escape
+anything else until the closing tag.</p>
+<h2 id="built-in-shortcodes"><a class="zola-anchor" href="#built-in-shortcodes" aria-label="Anchor link for: built-in-shortcodes">🔗</a>Built-in shortcodes</h2>
+<p>Zola comes with a few built-in shortcodes. If you want to override a default shortcode template,
+simply place a <code>{shortcode_name}.html</code> file in the <code>templates/shortcodes</code> directory and Zola will
+use that instead.</p>
+<h3 id="youtube"><a class="zola-anchor" href="#youtube" aria-label="Anchor link for: youtube">🔗</a>YouTube</h3>
+<p>Embed a responsive player for a YouTube video.</p>
+<p>The arguments are:</p>
+<ul>
+<li><code>id</code>: the video id (mandatory)</li>
+<li><code>class</code>: a class to add the <code>div</code> surrounding the iframe</li>
+<li><code>autoplay</code>: whether to autoplay the video on load</li>
+</ul>
+<p>Usage example:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">{{ youtube(id=&quot;dQw4w9WgXcQ&quot;) }}
+
+{{ youtube(id=&quot;dQw4w9WgXcQ&quot;, autoplay=true) }}
+
+{{ youtube(id=&quot;dQw4w9WgXcQ&quot;, autoplay=true, class=&quot;youtube&quot;) }}
+</span></pre>
+<p>Result example:</p>
+<div >
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+    </iframe>
+</div>
+<h3 id="vimeo"><a class="zola-anchor" href="#vimeo" aria-label="Anchor link for: vimeo">🔗</a>Vimeo</h3>
+<p>Embed a player for a Vimeo video.</p>
+<p>The arguments are:</p>
+<ul>
+<li><code>id</code>: the video id (mandatory)</li>
+<li><code>class</code>: a class to add the <code>div</code> surrounding the iframe</li>
+</ul>
+<p>Usage example:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">{{ vimeo(id=&quot;124313553&quot;) }}
+
+{{ vimeo(id=&quot;124313553&quot;, class=&quot;vimeo&quot;) }}
+</span></pre>
+<p>Result example:</p>
+<div >
+     <iframe src="//player.vimeo.com/video/124313553" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+    </iframe>
+</div>
+<h3 id="streamable"><a class="zola-anchor" href="#streamable" aria-label="Anchor link for: streamable">🔗</a>Streamable</h3>
+<p>Embed a player for a Streamable video.</p>
+<p>The arguments are:</p>
+<ul>
+<li><code>id</code>: the video id (mandatory)</li>
+<li><code>class</code>: a class to add the <code>div</code> surrounding the iframe</li>
+</ul>
+<p>Usage example:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">{{ streamable(id=&quot;92ok4&quot;) }}
+
+{{ streamable(id=&quot;92ok4&quot;, class=&quot;streamble&quot;) }}
+</span></pre>
+<p>Result example:</p>
+<div >
+    <iframe src="https://www.streamable.com/e/92ok4" 
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen mozallowfullscreen webkitallowfullscreen>
+    </iframe>
+</div>
+<h3 id="gist"><a class="zola-anchor" href="#gist" aria-label="Anchor link for: gist">🔗</a>Gist</h3>
+<p>Embed a <a href="https://gist.github.com">Github gist</a>.</p>
+<p>The arguments are:</p>
+<ul>
+<li><code>url</code>: the url to the gist (mandatory)</li>
+<li><code>file</code>: by default, the shortcode will pull every file from the URL unless a specific filename is requested</li>
+<li><code>class</code>: a class to add the <code>div</code> surrounding the iframe</li>
+</ul>
+<p>Usage example:</p>
+<pre style="background-color:#383838;">
+<span style="color:#e6e1dc;">{{ gist(url=&quot;</span><span style="text-decoration:underline;color:#86c20e;">https://gist.github.com/Keats/e5fb6aad409f28721c0ba14161644c57&quot;</span><span style="color:#e6e1dc;">) }}
+
+{{ gist(url=&quot;</span><span style="text-decoration:underline;color:#86c20e;">https://gist.github.com/Keats/e5fb6aad409f28721c0ba14161644c57&quot;</span><span style="color:#e6e1dc;">, class=&quot;gist&quot;) }}
+</span></pre>
+<p>Result example:</p>
+<div >
+    <script src="https:&#x2F;&#x2F;gist.github.com&#x2F;Keats&#x2F;e5fb6aad409f28721c0ba14161644c57.js"></script>
+</div>
+
+
+    </div>
+</div>
+
+        </div>
+        <footer>
+            ©2017-2019 — <a class="white" href="http://vincentprouillet.com">Vincent Prouillet</a> and <a class="white" href="https://github.com/getzola/zola/graphs/contributors">contributors</a>
+        </footer>
+
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search_index.en.js"></script>
+        <script type="text/javascript" src="https:&#x2F;&#x2F;www.getzola.org&#x2F;search.js"></script>
+    </body>
+</html>
