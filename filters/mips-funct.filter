@@ -1,0 +1,21 @@
+# MIPS funct codes (R-type, OP=0x00)
+00 sll
+02 srl
+03 sra
+08 jr
+10 mfhi
+12 mflo
+18 mult
+19 multu
+1A div
+1B divu
+20 add
+21 addu
+22 sub
+23 subu
+24 and
+25 or
+26 xor
+27 nor
+2A slt
+2B sltu

@@ -1,0 +1,54 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Tue Oct 23 07:57:09 2018
+[*]
+[dumpfile] "fake_cpu-fib_func.vcd"
+[dumpfile_mtime] "Tue Oct 23 07:56:51 2018"
+[dumpfile_size] 15165
+[savefile] "filters/fake_cpu-fib_func.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-5.270822 57 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] cpu_test.
+[treeopen] cpu_test.cpu.
+[sst_width] 225
+[signals_width] 133
+[sst_expanded] 1
+[sst_vpaned_height] 168
+@28
+cpu_test.clk
+cpu_test.reset
+@200
+---A--
+@22
+cpu_test.cpu.PC_A[31:0]
+@4023
+^>1 mips-dasm-filter
+cpu_test.cpu.INS_A[31:0]
+@200
+---B--
+@22
+cpu_test.cpu.PC_B[31:0]
+cpu_test.cpu.INS_B[31:0]
+@2022
+^2 filters/mips-opcodes.filter
+cpu_test.cpu.OP_B[5:0]
+@200
+---C--
+@22
+cpu_test.cpu.PC_C[31:0]
+cpu_test.cpu.INS_C[31:0]
+@2022
+^4 filters/mips-funct.filter
+cpu_test.cpu.FUNCT_C[5:0]
+@2023
+^2 filters/mips-opcodes.filter
+cpu_test.cpu.OP_C[5:0]
+@2022
+^1 filters/mips-regs.filter
+cpu_test.cpu.RS_C[4:0]
+^1 filters/mips-regs.filter
+cpu_test.cpu.RT_C[4:0]
+[pattern_trace] 1
+[pattern_trace] 0

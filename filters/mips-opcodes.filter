@@ -1,0 +1,20 @@
+# MIPS opcodes
+00 R-type
+02 j
+03 jal
+04 beq
+05 bne
+08 addi
+09 addiu
+0A slti
+0B sltiu
+0C andi
+0D ori
+0F lui
+10 mfc0
+23 lw
+24 lbu
+25 lhu
+28 sb
+29 sh
+2B sw
